@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+            
+        <link rel="stylesheet" type="text/css" href="{% static 'sntech/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'sntech/bootstrap-4.3.1-dist/css/bootstrap.min.css' %}">
+        <script src="{% static 'sntech/bootstrap-4.3.1-dist/js/bootstrap.min.js' %}"></script>
+
+    </head>
+    <body>
+        <div class="">
+                <nav style="border:1px solid blue;box-shadow: 0px 5px 0px black" class="navbar navbar-expand-lg ">
+                      
+                        <img width="50px" src="{% static 'sntech/images/logo.jpg' %}" alt="sunu logo" />
+                        <div style="margin-left:40%" class="collapse navbar-collapse " id="navbarSupportedContent">
+                          <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a style="color:white" class="nav-link" href="{{'/'}}">Accueil <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                              <a style="color:white" class="nav-link" href="{{'/services'}}">Services</a>
+                            </li>
+                            <li class="nav-item">
+                              <a style="color:white" class="nav-link" href="{{'/realisations'}}">Realisations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a style="color:white" class="nav-link" href="{{'/contact'}}">Nous Contacter</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </nav>
+                    <div class="row">
+                        <div class="col-lg-1 col-md-1">
+                            <div style="margin-top:200%">
+                                <img style="margin:10px" width="50px" src="{% static 'sntech/images/facebook.jpg' %}" alt="sunu logo" />
+                                <img style="margin:10px" width="50px" src="{% static 'sntech/images/lin.jpg' %}" alt="sunu logo" />
+                                <img style="margin:10px" width="50px" src="{% static 'sntech/images/twit.jpg' %}" alt="sunu logo" />
+                            </div> 
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-xs-8 col-sm-8">
+                                {% block content %}
+                                {% endblock %}
+                        </div>
+                    </div>
+                    <div>
+                        <p style="text-align:center;font-size: 1em;color:white;position: absolute;bottom: 0px;width:100%;">BY SNTECH COPYRIGHT 2019</p>
+                    </div>
+           
+        </div>  
+    </body>
+</html>
